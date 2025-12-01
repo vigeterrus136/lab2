@@ -9,9 +9,6 @@ public final class Azumarill extends Marill {
         super(name, level);
         setType(Type.WATER, Type.FAIRY);
         setStats(100,50,80,60,80,50);
-        this.addMove(new Ice_Beam());
-        this.addMove(new Rest());
-        this.addMove(new Muddy_Water());
         this.addMove(new Facade());
     }
 }

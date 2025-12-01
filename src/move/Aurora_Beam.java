@@ -6,7 +6,7 @@ public final class Aurora_Beam extends SpecialMove{
         super(Type.ICE,65,1.0);
 
     }
-    @Override public void applyOppEffects(Pokemon p) {
+    @Override protected void applyOppEffects(Pokemon p) {
         Effect beam = new Effect().chance(0.1);
         if (beam.success()){
             beam.stat(Stat.ATTACK,-1);
@@ -14,7 +14,7 @@ public final class Aurora_Beam extends SpecialMove{
             System.out.println("Aurora Beam: противник ослабевает");
         }
     }
-    @Override public String describe(){
+    @Override protected String describe(){
         return "выпускает радужный луч";
     }
 }

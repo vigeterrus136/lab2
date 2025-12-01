@@ -7,7 +7,7 @@ public final class Snarl extends SpecialMove{
         super(Type.DARK,55,0.95);
 
     }
-    @Override public void applyOppEffects(Pokemon p) {
+    @Override protected void applyOppEffects(Pokemon p) {
         Effect snarl = new Effect().chance(1);
         if (snarl.success()){
             snarl.stat(Stat.SPECIAL_ATTACK,-1);
@@ -15,7 +15,7 @@ public final class Snarl extends SpecialMove{
             System.out.println("snarl: противник ослабевает");
         }
     }
-    @Override public String describe(){
+    @Override protected String describe(){
         return "кричит, как будто ворчит на что-то";
     }
 }

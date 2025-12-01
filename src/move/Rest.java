@@ -6,14 +6,14 @@ public final class Rest extends StatusMove {
         super(Type.PSYCHIC, 0, 1.0);
     }
 
-    @Override public void applySelfEffects(Pokemon p) {
+    @Override protected void applySelfEffects(Pokemon p) {
         double currentHP = p.getHP();
         double maxHP = p.getStat(Stat.HP);
         int heal = (int)(maxHP - currentHP);
         p.setMod(Stat.HP, heal);
     }
 
-    @Override public String describe() {
+    @Override protected String describe() {
         return "покемон засыпает и полностью восстанавливает себе HP";
     }
 }

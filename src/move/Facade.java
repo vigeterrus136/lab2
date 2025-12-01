@@ -1,11 +1,11 @@
 package move;
 import ru.ifmo.se.pokemon.*;
 public final class Facade extends PhysicalMove{
-    public boolean doubled = false;
+    private boolean doubled = false;
     public Facade(){
         super(Type.NORMAL,70,1.00);
     }
-    @Override public double calcBaseDamage(Pokemon att, Pokemon def) {
+    @Override protected double calcBaseDamage(Pokemon att, Pokemon def) {
         double power = this.power;
 
         Status s = def.getCondition();
@@ -17,7 +17,7 @@ public final class Facade extends PhysicalMove{
 
         return power;
     }
-    @Override public String describe() {
+    @Override protected String describe() {
         if (doubled) {
             return "использует приём Facade! Сила атаки УДВОЕНА из-за статуса противника!";
         }

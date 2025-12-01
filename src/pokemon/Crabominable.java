@@ -9,9 +9,6 @@ public final class Crabominable extends Crabrawler {
         super(name, level);
         setType(Type.FIGHTING, Type.ICE);
         setStats(97,132,77,62,67,43);
-        this.addMove(new Brutal_Swing());
-        this.addMove(new Facade());
-        this.addMove(new Bulk_Up());
         this.addMove(new Blizzard());
     }
 }

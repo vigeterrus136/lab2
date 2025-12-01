@@ -9,8 +9,6 @@ public class Marill extends Azuril {
         super(name, level);
         setType(Type.WATER, Type.FAIRY);
         setStats(70,20,50,20,50,40);
-        this.addMove(new Ice_Beam());
-        this.addMove(new Rest());
         this.addMove(new Muddy_Water());
     }
 }

@@ -5,14 +5,14 @@ public final class Bulk_Up extends StatusMove {
         super(Type.FIGHTING,0,1.0);
 
     }
-    @Override public void applySelfEffects(Pokemon p) {
+    @Override protected void applySelfEffects(Pokemon p) {
         Effect bulk = new Effect().stat(Stat.ATTACK, +1).stat(Stat.DEFENSE, +1);
         p.addEffect(bulk);
     }
 
 
 
-    @Override public String describe(){
+    @Override protected String describe(){
         return "увеличивает объем тела, усиливая как АТАКУ, так и ЗАЩИТУ";
     }
 }

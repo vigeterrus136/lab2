@@ -7,7 +7,7 @@ public final class Extrasensory extends SpecialMove {
         super(Type.PSYCHIC, 80, 1.0);
     }
 
-    @Override public void applyOppEffects(Pokemon p) {
+    @Override protected void applyOppEffects(Pokemon p) {
         Effect ext = new Effect().chance(0.1);
         if (ext.success()){
             Effect.flinch(p);
@@ -15,7 +15,7 @@ public final class Extrasensory extends SpecialMove {
         }
     }
 
-    @Override public String describe() {
+    @Override protected String describe() {
         return "атакует странной, невидимой силой";
     }
 }
