@@ -1,0 +1,15 @@
+package move;
+
+import ru.ifmo.se.pokemon.*;
+
+public final class Brutal_Swing extends PhysicalMove{
+    public Brutal_Swing(){
+        super(Type.DARK,60,1.0);
+    }
+    // подумать как реализовать бф
+    @Override public String describe(){
+        return "яростно размахивает своим телом, нанося урон всему вокруг";
+    }
+}
+
+
